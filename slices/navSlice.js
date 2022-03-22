@@ -10,6 +10,10 @@ export const navSlice = createSlice({
   name: "nav",
   initialState,
   reducers: {
+    // Redux Toolkit allows us to write "mutating" logic in reducers. It
+    // doesn't actually mutate the state because it uses the Immer library,
+    // which detects changes to a "draft state" and produces a brand new
+    // immutable state based off those changes
     setOrigin: (state, action) => {
       state.origin = action.payload; // we wantto change the origin to the payload
     },
@@ -21,3 +25,9 @@ export const navSlice = createSlice({
     },
   },
 });
+
+// Action creators are generated for each case reducer function
+export const { setOrigin, setDestination, setTravelTimeInformation } =
+  navSlice.actions;
+
+export default navSlice.reducer;
