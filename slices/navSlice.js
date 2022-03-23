@@ -30,4 +30,10 @@ export const navSlice = createSlice({
 export const { setOrigin, setDestination, setTravelTimeInformation } =
   navSlice.actions;
 
+// Selectors
+export const selectOrigin = (state) => state.nav.origin; // without the curly brackets it means a de=irect return (after =>)
+export const selectDestination = (state) => state.nav.destination;
+export const selectTravelTimeInformation = (state) =>
+  state.nav.travelTimeInformation;
+
 export default navSlice.reducer;
