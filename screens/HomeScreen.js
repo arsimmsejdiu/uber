@@ -17,8 +17,8 @@ const HomeScreen = () => {
             uri: "https://links.papareact.com/gzs",
           }}
         />
+        <NavOptions />
       </View>
-      <NavOptions />
     </SafeAreaView>
   );
 };
